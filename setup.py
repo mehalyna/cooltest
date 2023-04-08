@@ -3,8 +3,8 @@ from setuptools import setup, find_packages
 setup(
     name="cooltest",
     version="1.0",
-    author="Zico Kolter",
-    author_email="zkolter@cs.cmu.edu",
+    author="Halyna",
+    author_email="firstmy555@gmail.com",
     packages=find_packages(),
     description="Interface library for minimalist autograding site",
     python_requires=">=3.5",
