@@ -12,7 +12,7 @@ import pytest
 
 
 def test_addition_poz(func):
-    if func.__name__(3, 2) == 5:
+    if func(3, 2) == 5:
         print("Pass")
     else:
         print("Failed")
