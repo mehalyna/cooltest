@@ -11,8 +11,8 @@ import types
 import pytest
 
 
-def test_addition_poz():
-    assert addition(3, 2) == 5
+def test_addition_poz(func):
+    assert func.__name__(3, 2) == 5
 
 
 def test_addition_poz_neg():
