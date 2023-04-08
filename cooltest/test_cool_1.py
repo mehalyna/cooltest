@@ -11,13 +11,18 @@ import types
 import pytest
 
 
-@staticmethod
 def test_addition_poz(func):
     if func(3, 2) == 5:
         print("Pass")
     else:
         print("Failed")
     return func
+
+
+@test_addition_poz
+def addition(param1, param2):
+    # Type your code
+    return param1 + param2
 
 
 def test_addition_poz_neg():
