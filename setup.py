@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="cooltest",
-    version="1.0",
+    version="10.0",
     author="Halyna",
     author_email="firstmy555@gmail.com",
     packages=find_packages(),
