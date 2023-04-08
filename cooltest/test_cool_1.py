@@ -12,7 +12,7 @@ import pytest
 
 
 def test_addition_poz():
-    assert addition.addition(3, 2) == 5
+    assert addition(3, 2) == 5
 
 
 def test_addition_poz_neg():
