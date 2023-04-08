@@ -19,19 +19,34 @@ def test_addition_poz(func):
     return func
 
 
+def test_addition_poz_neg(func):
+    if func(3, -5) == -2:
+        print("Pass")
+    else:
+        print("Failed")
+    return func
+
+
+def test_addition_neg(func):
+    if func(-3, -2) == -5:
+        print("Pass")
+    else:
+        print("Failed")
+    return func
+
+
+def test_addition_zero(func):
+    if func(3, 0) == 3:
+        print("Pass")
+    else:
+        print("Failed")
+    return func
+
+
 @test_addition_poz
+@test_addition_neg
+@test_addition_poz_neg
+@test_addition_zero
 def addition(param1, param2):
     # Type your code
     return param1 + param2
-
-
-def test_addition_poz_neg():
-    assert addition.addition(3, -5) == -2
-
-
-def test_addition_neg():
-    assert addition.addition(-3, -2) == -5
-
-
-def test_addition_zero():
-    assert addition.addition(3, 0) == 3
