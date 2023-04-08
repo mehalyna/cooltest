@@ -13,6 +13,7 @@ import pytest
 
 def test_addition_poz(func):
     assert func.__name__(3, 2) == 5
+    return func
 
 
 def test_addition_poz_neg():
