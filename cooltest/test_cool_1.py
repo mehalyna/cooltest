@@ -11,6 +11,7 @@ import types
 import pytest
 
 
+@staticmethod
 def test_addition_poz(func):
     if func(3, 2) == 5:
         print("Pass")
