@@ -11,8 +11,9 @@ import types
 import pytest
 
 
-def test_addition_poz(func):
-    if func(3, 2) == 5:
+def test_get_segment(func):
+    doc = "Natural. Language. Processing"
+    if len(list(func(doc))) == 3:
         print("Pass")
     else:
         print("Failed")
