@@ -20,8 +20,9 @@ def test_get_segment(func):
     return func
 
 
-def test_addition_poz_neg(func):
-    if func(3, -5) == -2:
+def test_get_tokens(func):
+    doc = "Natural Language Processing is the best choice for the learning"
+    if len(list(func(doc))) == 10:
         print("Pass")
     else:
         print("Failed")
@@ -44,7 +45,6 @@ def test_addition_zero(func):
     return func
 
 
-@test_addition_neg
 @test_addition_poz_neg
 @test_addition_zero
 def addition(param1, param2):
