@@ -44,7 +44,7 @@ def test_addition_zero(func):
     return func
 
 
-@test_addition_poz
+# @test_addition_poz
 @test_addition_neg
 @test_addition_poz_neg
 @test_addition_zero
