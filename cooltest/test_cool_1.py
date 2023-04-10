@@ -45,7 +45,6 @@ def test_addition_zero(func):
     return func
 
 
-@test_addition_poz_neg
 @test_addition_zero
 def addition(param1, param2):
     # Type your code
