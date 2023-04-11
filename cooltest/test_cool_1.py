@@ -7,9 +7,7 @@ import copy
 import gzip
 import re
 import types
-
-import pytest
-
+import spacy
 
 def test_get_segment(func):
     doc = "Natural. Language. Processing"
@@ -29,12 +27,19 @@ def test_get_tokens(func):
     return func
 
 
-def test_addition_neg(func):
-    if func(-3, -2) == -5:
+def test_remove_stop_words(func):
+    nlp = spacy.load("en_core_web_sm")
+    sent = "Natural Language Processing is the best choice for the learning"
+    from spacy.tokenizer import Tokenizer
+    tokenizer = Tokenizer(nlp.vocab)
+    tokens = tokenizer(sent)
+    if len(list(func(tokens))) == 6:
         print("Pass")
     else:
         print("Failed")
     return func
+
+
 
 
 def test_addition_zero(func):
