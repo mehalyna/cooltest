@@ -34,9 +34,9 @@ def test_remove_stop_words(func):
     tokenizer = Tokenizer(nlp.vocab)
     tokens = tokenizer(sent)
     if len(list(func(tokens))) == 6:
-        print(f"Stop Wordes Removing Passed/n")
+        print(f"Stop Wordes Removing Passed\n")
     else:
-        print(f"Stop Wordes Removing Failed/n")
+        print(f"Stop Wordes Removing Failed\n")
     return func
 
 
