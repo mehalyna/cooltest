@@ -12,18 +12,18 @@ import spacy
 def test_get_segment(func):
     doc = "Natural. Language. Processing"
     if len(list(func(doc))) == 3:
-        print("Pass")
+        print(f"Segmentaition Passed\n")
     else:
-        print("Failed")
+        print(f"Segmentaition Failed\n")
     return func
 
 
 def test_get_tokens(func):
     doc = "Natural Language Processing is the best choice for the learning"
     if len(list(func(doc))) == 10:
-        print("Pass")
+        print(f"Tokenization Passed\n")
     else:
-        print("Failed")
+        print(f"Tokenization Failed\n")
     return func
 
 
@@ -34,9 +34,9 @@ def test_remove_stop_words(func):
     tokenizer = Tokenizer(nlp.vocab)
     tokens = tokenizer(sent)
     if len(list(func(tokens))) == 6:
-        print("Pass")
+        print(f"Stop Wordes Removing Passed/n")
     else:
-        print("Failed")
+        print(f"Stop Wordes Removing Failed/n")
     return func
 
 
