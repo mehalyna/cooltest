@@ -40,6 +40,23 @@ def test_remove_stop_words(func):
     return func
 
 
+def test_stemm_lemmatization(func):
+    nlp = spacy.load('en_core_web_sm')
+    sent = "Natural Language Processing is the best choice for the learning"
+    doc = nlp(sent)
+    list_tokens_lemma_act = []
+    list_tokens_lemma_exp = []
+    for token in doc:
+        list_tokens_lemma_exp.append(token.lemma_)
+    sut = func(sent)
+    for token in sut:
+        list_tokens_lemma_act.append(token.lemma_)
+    if list_tokens_lemma_exp == list_tokens_lemma_act:
+        print(f"Stemming and Lemmatization Passed\n")
+    else:
+        print(f"Stemming and Lemmatization Failed\n")
+    return func
+
 
 
 def test_addition_zero(func):
