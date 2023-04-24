@@ -67,9 +67,9 @@ def test_part_of(func):
         word_tags_exp[word.text] =  word.pos_
     word_tags_act = func(sent)
     if word_tags_act == word_tags_exp:
-        print(f"Stemming and Lemmatization Passed\n")
+        print(f"Parts of Speech Passed\n")
     else:
-        print(f"Stemming and Lemmatization Failed\n")
+        print(f"Parts of Speech Failed\n")
     return func
     
     
