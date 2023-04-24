@@ -58,6 +58,23 @@ def test_stemm_lemmatization(func):
     return func
 
 
+def test_part_of(func):
+    nlp = spacy.load('en_core_web_sm')
+    sent = "Natural Language Processing is the best choice for the learning"
+    doc = nlp(sent)
+    word_tags_exp = {}
+    for word in doc:
+        word_tags_exp[word.text] =  word.pos_
+    word_tags_act = func(sent)
+    if word_tags_act == word_tags_exp:
+        print(f"Stemming and Lemmatization Passed\n")
+    else:
+        print(f"Stemming and Lemmatization Failed\n")
+    return func
+    
+    
+
+
 
 def test_addition_zero(func):
     if func(3, 0) == 3:
