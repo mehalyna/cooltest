@@ -7,7 +7,7 @@ def test_play_rock_paper_scissors(func):
         print(f"Echo from decorator. Player's choice: {player_choices[player_choice]}")
         #print(f"Computer's choice: {computer_choice}")
         result = func(player_choice)
-        if result == "You win" or result == "Computer wins":
+        if result in {"You win", "Computer wins", "Tie"}:
             print("Pass")
         else:
             print("Failed")
