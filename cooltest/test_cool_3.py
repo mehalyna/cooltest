@@ -1,4 +1,4 @@
-def test_shedule_task(func):
+def test_schedule_task(func):
     tasks_list = [
     ('Task_A', 4.0, {'Resource_1': 2, 'Resource_2': 1}),
     ('Task_B', 7.0, {'Resource_2': 3}),
