@@ -26,3 +26,21 @@ def test_optimize_vrp(func):
     return func
 
 
+def test_optimize_oim(func):
+    demand_forecast = [10, 20, 15, 25, 30]
+    holding_cost_per_period = 1.5
+    ordering_cost_per_order = 25.0
+    initial_inventory_level = 50
+    reorder_point_level = 50
+    expected_result = [50, 0, 15, 10, 20]
+    if (func(demand_forecast,
+    holding_cost_per_period,
+    ordering_cost_per_order,
+    initial_inventory_level,
+    reorder_point_level)) == expected_result:
+        print(f"OIM Task Passed\n")
+    else:
+        print(f"OIM Task  Failed\n")
+    return func
+
+
