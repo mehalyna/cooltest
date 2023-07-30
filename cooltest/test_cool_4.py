@@ -3,8 +3,8 @@ def test_identify_risks(func):
         "Privacy concerns.",
         "Security vulnerabilities.",
         "Bias in AI algorithms."]
-    expected_result = {"Privacy":"Privacy concerns.", "Security": "Security vulnerabilities.","Fairness": "Bias in AI algorithms."}
-
+    expected_result = {"Privacy":"Privacy concerns.", "Security":"Security vulnerabilities.","Fairness":"Bias in AI algorithms."}
+    print(func(risks_list))
     if (func(risks_list)) == expected_result:
         print(f"Risk Task Passed\n")
     else:
