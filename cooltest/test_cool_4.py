@@ -6,7 +6,10 @@ def test_identify_risks(func):
                        'security': ['Security vulnerabilities: AI systems could be susceptible to cyberattacks, leading to unauthorized access to personal information.'], 
                        'fairness': ['Bias in AI algorithms: AI algorithms might inadvertently perpetuate biases present in the data they are trained on, leading to unfair or discriminatory outcomes.']}
     actual_result = func(risks_categories)
+ 
+    print(expected_result) 
     print(actual_result)
+
     if actual_result == expected_result:
         print(f"Risk Task Passed\n")
     else:
