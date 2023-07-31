@@ -1,10 +1,11 @@
 def test_identify_risks(func):
-    risks_list = [
-        "Privacy concerns.",
-        "Security vulnerabilities.",
-        "Bias in AI algorithms."]
-    expected_result = {'privacy': ['Privacy concerns.'], 'security': ['Security vulnerabilities.'], 'fairness': ['Bias in AI algorithms.']}
-    actual_result = func(risks_list)
+    risks_categories = [['Privacy', 'Privacy concerns: AI-powered devices may collect personal data, raising concerns about how this data is stored and used.'], 
+                        ['Security', 'Security vulnerabilities: AI systems could be susceptible to cyberattacks, leading to unauthorized access to personal information.'], 
+                        ['Fairness', 'Bias in AI algorithms: AI algorithms might inadvertently perpetuate biases present in the data they are trained on, leading to unfair or discriminatory outcomes.']]
+    expected_result = {'privacy': ['Privacy concerns.'], 
+                       'security': ['Security vulnerabilities.'], 
+                       'fairness': ['Bias in AI algorithms.']}
+    actual_result = func(risks_categories)
     print(actual_result)
     if actual_result == expected_result:
         print(f"Risk Task Passed\n")
