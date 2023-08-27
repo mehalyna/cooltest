@@ -7,9 +7,6 @@ def test_identify_risks(func):
                        'fairness': ['Bias in AI algorithms: AI algorithms might inadvertently perpetuate biases present in the data they are trained on, leading to unfair or discriminatory outcomes.']}
     actual_result = func(risks_categories)
  
-    print(expected_result) 
-    print(actual_result)
-
     if len(actual_result) == len(expected_result):
         print(f"Risk Task Passed\n")
     else:
