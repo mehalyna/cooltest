@@ -4,7 +4,7 @@ def test_detect_color_task(func):
     expected_delta = 57.8
     act_dominant_color, act_percentage = func(image_path)
     if list(act_dominant_color) == expected_dominant_color and abs(expected_delta - act_percentage) <= 10:
-        print(f"Schedule Task Passed\n")
+        print(f"Color Detect Task Passed\n")
     else:
-        print(f"Schedule Task  Failed\n")
+        print(f"Color Detect  Failed\n")
     return func
