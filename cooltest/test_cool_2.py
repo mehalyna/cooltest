@@ -1,8 +1,8 @@
 import random
 
 def test_play_rock_paper_scissors(func):
-    player_choice = 'R'
-    computer_choice = 'P'
+    player_choice = 'rock'
+    computer_choice = 'paper'
     result = func(player_choice, computer_choice)
     if result == "Comp wins":
         print("Test game Pass")
