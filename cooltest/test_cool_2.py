@@ -16,3 +16,4 @@ def test_computer_makes_choice(func):
         print('Test Comp choice pass')
     else:
         print('Test Comp choice failed')
+    return func
