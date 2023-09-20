@@ -1,6 +1,6 @@
 def test_search_word(func):
-    word = "APPLE"
-    grid = [['A', 'P', 'P', 'L'], ['E', 'F', 'G', 'E'], ['I', 'J', 'K', 'G'], ['M', 'N', 'H', 'P']]
+    word = "ROCK"
+    grid = [['A', 'B', 'C', 'R'], ['E', 'F', 'G', 'O'], ['I', 'J', 'K', 'C'], ['M', 'N', 'O', 'K']]
     
     if func(grid, word):
         print('Test Display Word pass')
