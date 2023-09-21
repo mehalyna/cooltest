@@ -20,3 +20,20 @@ def test_find_words(func):
         print('Test Find Words failed')
     return func
 
+
+def test_is_valid(func):
+    grid = [
+    ['S', ' ', ' ', ' ', ' '],
+    ['X', 'X', ' ', ' ', 'E'],
+    [' ', ' ', 'X', ' ', ' '],
+    ['X', 'X', ' ', 'X', ' '],
+    [' ', ' ', ' ', ' ', ' ']
+    ]
+    cell = (0, 1)
+    expected_list = func(cell, grid)
+    if expected_list:
+        print('Test Is Valid Pass')
+    else:
+        print('Test Is Valid Failed')
+    return func
+
