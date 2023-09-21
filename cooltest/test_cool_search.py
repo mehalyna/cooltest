@@ -30,8 +30,26 @@ def test_is_valid(func):
     [' ', ' ', ' ', ' ', ' ']
     ]
     cell = (0, 1)
-    expected_list = func(cell, grid)
-    if expected_list:
+    actual_list = func(cell, grid)
+    if actual_list:
+        print('Test Is Valid Pass')
+    else:
+        print('Test Is Valid Failed')
+    return func
+
+
+def get_neighbors(func):
+    grid = [
+    ['S', ' ', ' ', ' ', ' '],
+    ['X', 'X', ' ', ' ', 'E'],
+    [' ', ' ', 'X', ' ', ' '],
+    ['X', 'X', ' ', 'X', ' '],
+    [' ', ' ', ' ', ' ', ' ']
+    ]
+    cell = (0, 2) #(row, col)
+    expected_neighbors = [(1, 2), (0, 1), (0, 3)]
+    actual_neighbors = func(cell, grid)
+    if expected_neighbors == actual_neighbors:
         print('Test Is Valid Pass')
     else:
         print('Test Is Valid Failed')
