@@ -38,7 +38,26 @@ def test_is_valid(func):
     return func
 
 
-def get_neighbors(func):
+def test_find_shortest_path(func):
+    grid = [
+    ['S', ' ', ' ', ' ', ' '],
+    ['X', 'X', ' ', ' ', 'E'],
+    [' ', ' ', 'X', ' ', ' '],
+    ['X', 'X', ' ', 'X', ' '],
+    [' ', ' ', ' ', ' ', ' ']
+    ]
+    start_point = (0, 0)
+    end_point = (1, 4)
+    expected_path = [(0, 0), (0, 1), (0, 2), (1, 2), (1, 3), (1, 4)]
+    actual_path = func(grid, start_point, end_point)
+    if expected_path == actual_path:
+        print('Test Find Path Pass')
+    else:
+        print('Test Find Path Failed')
+    return func
+
+
+def test_get_neighbors(func):
     grid = [
     ['S', ' ', ' ', ' ', ' '],
     ['X', 'X', ' ', ' ', 'E'],
@@ -50,8 +69,8 @@ def get_neighbors(func):
     expected_neighbors = [(1, 2), (0, 1), (0, 3)]
     actual_neighbors = func(cell, grid)
     if expected_neighbors == actual_neighbors:
-        print('Test Is Valid Pass')
+        print('Test Get Neighbors Pass')
     else:
-        print('Test Is Valid Failed')
+        print('Test Get Neighbors Failed')
     return func
 
