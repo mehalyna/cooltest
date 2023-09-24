@@ -74,3 +74,36 @@ def test_get_neighbors(func):
         print('Test Get Neighbors Failed')
     return func
 
+
+def test_dfs(func):
+    visited = [
+    [False, False, False, False, False], 
+    [False, False, False, False, False], 
+    [False, False, False, False, False], 
+    [False, False, False, False, False], 
+    [False, False, False, False, False]
+    ]
+    expected_result = func(1, 1, visited, [])
+    if expected_result:
+        print('Test DFS Pass')
+    else:
+        print('Test DFS Failed')
+    return func
+
+
+def test_solve_maze(func):
+    maze = [
+    ['S', ' ', 'X', 'X', 'E'],
+    ['X', ' ', ' ', 'X', ' '],
+    ['X', 'X', ' ', ' ', ' '],
+    [' ', 'X', 'X', 'X', ' '],
+    [' ', ' ', ' ', ' ', ' ']
+    ]   
+    expected_result = [(0, 0), (0, 1), (1, 1), (1, 2), (2, 2), (2, 3), (2, 4), (1, 4)]
+    actual_result =  func(maze)
+    if expected_result == actual_result:
+        print('Test Solve Maze Pass')
+    else:
+        print('Test Solve Maze Failed')
+    return func
+
