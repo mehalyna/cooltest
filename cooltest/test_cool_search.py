@@ -83,7 +83,14 @@ def test_dfs(func):
     [False, False, False, False, False], 
     [False, False, False, False, False]
     ]
-    expected_result = func(1, 1, visited, [])
+    maze = [
+    ['S', ' ', 'X', 'X', 'E'],
+    ['X', ' ', ' ', 'X', ' '],
+    ['X', 'X', ' ', ' ', ' '],
+    [' ', 'X', 'X', 'X', ' '],
+    [' ', ' ', ' ', ' ', ' ']
+    ]
+    expected_result = func(maze, 1, 1, visited, [])
     if expected_result:
         print('Test DFS Pass')
     else:
