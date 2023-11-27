@@ -106,7 +106,7 @@ def test_solve_maze(func):
     [' ', 'X', 'X', 'X', ' '],
     [' ', ' ', ' ', ' ', ' ']
     ]   
-    expected_result = [(0, 0), (0, 1), (1, 1), (1, 2), (2, 2), (2, 3), (2, 4), (1, 4)]
+    expected_result = [(0, 0), (0, 1), (1, 1), (1, 2), (2, 2), (2, 3), (2, 4), (1, 4), (0, 4)]
     actual_result =  func(maze)
     if expected_result == actual_result:
         print('Test Solve Maze Pass')
