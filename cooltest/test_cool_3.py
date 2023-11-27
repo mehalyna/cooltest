@@ -15,10 +15,10 @@ def test_schedule_task(func):
 
 def test_optimize_vrp(func):
     depot_location = (0, 0)
-    customer_locations = [(1, 3), (3, 5), (4, 8), (9, 6), (7, 1)]
+    customer_locations = [(1, 3), (3, 5), (4, 8), (9, 6), (7, 1), (2, 4)]
     capacity_per_vehicle = 3
     number_of_vehicles = 2
-    expected_result = [[(9, 6), (4, 8), (3, 5), (1, 3)], [(7, 1)]]
+    expected_result = [[(1, 3), (2, 4), (3, 5)], [(4, 8), (9, 6), (7, 1)]]
     if (func(depot_location, customer_locations, capacity_per_vehicle, number_of_vehicles)) == expected_result:
         print(f"VRP Task Passed\n")
     else:
